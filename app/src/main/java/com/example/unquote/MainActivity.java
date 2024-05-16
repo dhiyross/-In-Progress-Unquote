@@ -20,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Question> questions;
 
     // TODO 3-A: Declare View member variables
+    ImageView questionImageView;
+    TextView questionTextView;
+    TextView questionsRemainingTextView;
+    Button answer0Button;
+    Button answer1Button;
+    Button answer2Button;
+    Button answer3Button;
+    Button submitButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TODO 3-B: assign View member variables
+        questionImageView = findViewById(R.id.iv_main_question_image);
+        questionTextView = findViewById(R.id.tv_main_question_title);
+        questionsRemainingTextView = findViewById(R.id.tv_main_questions_remaining);
+        answer0Button = findViewById(R.id.btn_main_answer_0);
+        answer1Button = findViewById(R.id.btn_main_answer_1);
+        answer2Button = findViewById(R.id.btn_main_answer_2);
+        answer3Button = findViewById(R.id.btn_main_answer_3);
+        submitButton = findViewById(R.id.btn_main_submit_answer);
 
         // TODO 4-E: set onClickListener for each answer Button
 

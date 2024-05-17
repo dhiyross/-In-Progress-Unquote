@@ -59,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // TODO 3-F: displayQuestion(Question question) {...}
+    void displayQuestion(Question question) {
 
+    }
     // TODO 3-C: displayQuestionsRemaining(int questionRemaining) {...}
     void displayQuestionsRemaining(int remainingQuestions) {
         String remainingText = "Questions Remaining: " + remainingQuestions;

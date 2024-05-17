@@ -60,7 +60,17 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO 3-F: displayQuestion(Question question) {...}
     void displayQuestion(Question question) {
+        // Set the image for the question
+        questionImageView.setImageResource(question.imageId);
 
+        // Set the question text
+        questionTextView.setText(question.questionText);
+
+        // Set the text for each answer button
+        answer0Button.setText(question.answer0);
+        answer1Button.setText(question.answer1);
+        answer2Button.setText(question.answer2);
+        answer3Button.setText(question.answer3);
     }
     // TODO 3-C: displayQuestionsRemaining(int questionRemaining) {...}
     void displayQuestionsRemaining(int remainingQuestions) {
@@ -89,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             chooseNewQuestion();
 
             // TODO 3-H.i: uncomment after implementing displayQuestion(Question)
-            // displayQuestion(getCurrentQuestion());
+            displayQuestion(getCurrentQuestion());
         }
     }
 
@@ -120,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
          displayQuestionsRemaining(questions.size());
 
         // TODO 3-H.ii: Uncomment after implementing displayQuestion(Question)
-        // displayQuestion(firstQuestion);
+        displayQuestion(firstQuestion);
     }
 
     Question chooseNewQuestion() {

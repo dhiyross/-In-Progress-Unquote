@@ -61,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
     // TODO 3-F: displayQuestion(Question question) {...}
 
     // TODO 3-C: displayQuestionsRemaining(int questionRemaining) {...}
+    void displayQuestionsRemaining(int remainingQuestions) {
+        String remainingText = "Questions Remaining: " + remainingQuestions;
+        questionsRemainingTextView.setText(remainingText);
+    }
 
     // TODO 4-A: onAnswerSelected(int answerSelected) {...}
 
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         questions.remove(currentQuestion);
 
         // TODO 3-D.i: Uncomment the line below after implementing displayQuestionsRemaining(int)
-        // displayQuestionsRemaining(questions.size());
+         displayQuestionsRemaining(questions.size());
 
         if (questions.size() == 0) {
             String gameOverMessage = getGameOverMessage(totalCorrect, totalQuestions);
@@ -111,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         Question firstQuestion = chooseNewQuestion();
 
         // TODO 3-D.ii: Uncomment the line below after implementing displayQuestionsRemaining(int)
-        // displayQuestionsRemaining(questions.size());
+         displayQuestionsRemaining(questions.size());
 
         // TODO 3-H.ii: Uncomment after implementing displayQuestion(Question)
         // displayQuestion(firstQuestion);
